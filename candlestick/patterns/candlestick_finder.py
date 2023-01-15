@@ -6,10 +6,10 @@ class CandlestickFinder(object):
     def __init__(self, name, required_count, target=None):
         self.name = name
         self.required_count = required_count
-        self.close_column = 'close'
-        self.open_column = 'open'
-        self.low_column = 'low'
-        self.high_column = 'high'
+        self.close_column = 'Close'
+        self.open_column = 'Open'
+        self.low_column = 'Low'
+        self.high_column = 'High'
         self.data = None
         self.is_data_prepared = False
         self.multi_coeff = -1

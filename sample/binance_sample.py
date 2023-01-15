@@ -1,6 +1,8 @@
 from candlestick import candlestick
 import pandas as pd
 import requests
+import os
+os.system("python ")
 
 # Find candles where inverted hammer is detected
 
@@ -12,8 +14,8 @@ candles_df = pd.DataFrame(candles_dict,
 
 candles_df['T'] = pd.to_datetime(candles_df['T'], unit='ms')
 
-target = 'InvertedHammers'
-candles_df = candlestick.inverted_hammer(candles_df, target=target)
+target = 'BullishRisingThree'
+candles_df = candlestick.bullish_rising_three(candles_df, target=target)
 # candles_df = candlestick.doji_star(candles_df)
 # candles_df = candlestick.bearish_harami(candles_df)
 # candles_df = candlestick.bullish_harami(candles_df)

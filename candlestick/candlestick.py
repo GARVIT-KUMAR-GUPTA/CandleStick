@@ -1,7 +1,7 @@
 import re
 
 __builders = dict()
-__default_ohlc = ['open', 'high', 'low', 'close']
+__default_ohlc = ['Open', 'High', 'Low', 'Close']
 
 
 def __get_file_name(class_name):
@@ -122,6 +122,12 @@ def bullish_engulfing(candles_df,
     cndl = __create_object('BullishEngulfing', target)
     return cndl.has_pattern(candles_df, ohlc, is_reversed)
 
+def bullish_rising_three(candles_df,
+                   ohlc=__default_ohlc,
+                   is_reversed=False,
+                   target=None):
+    cndl = __create_object('BullishRisingThree', target)
+    return cndl.has_pattern(candles_df, ohlc, is_reversed)
 
 def hammer(candles_df,
                    ohlc=__default_ohlc,
